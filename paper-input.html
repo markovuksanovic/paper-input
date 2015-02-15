@@ -61,7 +61,7 @@ Use `paper-input-decorator` if you would like to implement validation.
   </style>
 
   <paper-input-decorator id="decorator" label="{{label}}" floatingLabel="{{floatingLabel}}" value="{{value}}" disabled?="{{disabled}}">
-    <input is="core-input" id="input" value="{{value}}" committedValue="{{committedValue}}" on-change="{{changeAction}}" disabled?="{{disabled}}">
+    <input is="core-input" id="input" type="{{type}}" value="{{value}}" committedValue="{{committedValue}}" on-change="{{changeAction}}" disabled?="{{disabled}}">
   </paper-input-decorator>
 
 </template>
@@ -80,6 +80,15 @@ Use `paper-input-decorator` if you would like to implement validation.
        * @default ''
        */
       label: '',
+
+      /**
+       * The type for this input.
+       *
+       * @attribute type
+       * @type string
+       * @default ''
+       */
+      type: '',
 
       /**
        * If true, the label will "float" above the text input once the
